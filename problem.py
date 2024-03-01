@@ -25,9 +25,10 @@ def get_cv(X, y):
 
 def _read_data(path, f_name):
     data = pd.read_csv(os.path.join(path, 'data', f_name), sep=",")
-    y_array = data[_target_column_name].values
-    X_array = data.drop([_target_column_name], axis=1).values
-    return X_array, y_array
+    data = data.dropna(subset=[_target_column_name])
+    X= data.drop([_target_column_name], axis=1)
+    y_array = data[_target_column_name].str.replace(',', '.').astype(float).values
+    return X, y_array
 
 
 def get_train_data(path='.'):
