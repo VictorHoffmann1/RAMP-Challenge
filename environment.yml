@@ -1,0 +1,12 @@
+name: ramp-boston
+channels:
+  - defaults
+dependencies:
+  - pip
+  - numpy
+  - scikit-learn
+  - pandas
+  - matplotlib
+  - seaborn
+  - pip:
+    - ramp-workflow
