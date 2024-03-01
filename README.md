@@ -1,4 +1,4 @@
-**# RAMP starting kit on the French housing regression dataset**
+# RAMP starting kit on the French housing regression dataset
 
 Authors: Marion Chadal, Victor Hoffmann, Julie Massé, Thomas Savini, Louis Teillet & Alexis
 
