@@ -27,7 +27,7 @@ def _get_data(path, f_name):
     data = pd.read_csv(os.path.join(path, 'data', f_name), sep=",")
     data = data.dropna(subset=[_target_column_name])
     X = data.drop([_target_column_name], axis=1).values
-    y_array = data[_target_column_name].str.replace(',', '.').astype(float).values
+    y_array = data[_target_column_name].values
     return X, y_array
 
 

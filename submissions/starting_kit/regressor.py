@@ -19,11 +19,7 @@ class Regressor(BaseEstimator):
         self.pipe = make_pipeline(self.transformer, self.model)
 
     def fit(self, X, y):
-        # Get numerical data
-        # it's your job to figure out what to do with categorical features
-        X_numerical = X[:,[3,5,7,8]]
-        self.pipe.fit(X_numerical, y)
+        self.pipe.fit(X, y)
 
     def predict(self, X):
-        X_numerical = X[:,[3,5,7,8]]
-        return self.pipe.predict(X_numerical)
+        return self.pipe.predict(X)
