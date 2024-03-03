@@ -23,18 +23,19 @@ def get_cv(X, y):
     return cv.split(X)
 
 
-def _read_data(path, f_name):
+def _get_data(path, f_name):
     data = pd.read_csv(os.path.join(path, 'data', f_name), sep=",")
+    data = data.dropna(subset=[_target_column_name])
+    X = data.drop([_target_column_name], axis=1).values
     y_array = data[_target_column_name].values
-    X_array = data.drop([_target_column_name], axis=1).values
-    return X_array, y_array
+    return X, y_array
 
 
 def get_train_data(path='.'):
     f_name = 'train.csv'
-    return _read_data(path, f_name)
+    return _get_data(path, f_name)
 
 
 def get_test_data(path='.'):
     f_name = 'test.csv'
-    return _read_data(path, f_name)
+    return _get_data(path, f_name)

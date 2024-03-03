@@ -3,6 +3,7 @@ from sklearn.pipeline import make_pipeline, Pipeline
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
+import pandas as pd
 
 
 class Regressor(BaseEstimator):
@@ -22,6 +23,3 @@ class Regressor(BaseEstimator):
 
     def predict(self, X):
         return self.pipe.predict(X)
-
-    def predict_proba(self, X):
-        return self.pipe.predict_proba(X)
