@@ -22,7 +22,7 @@ usage.
 ### Challenge description
 
 Get started on this RAMP with the
-[dedicated notebook](boston_housing_starting_kit.ipynb).
+[dedicated notebook](starting_kit.ipynb).
 
 ### Test a submission
 
