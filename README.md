@@ -1,8 +1,8 @@
-# RAMP starting kit on the Boston housing regression dataset
+# RAMP starting kit on the French housing regression dataset
 
-Authors: Alexandre Gramfort & Balazs Kegl
+Authors: Marion Chadal, Victor Hoffmann, Julie Massé, Thomas Savini, Louis Teillet & Alexis Winter
 
-[![Build Status](https://travis-ci.org/ramp-kits/boston_housing.svg?branch=master)](https://travis-ci.org/ramp-kits/boston_housing)
+[Source dataset](https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/#/resources)
 
 ## Getting started
 

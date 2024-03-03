@@ -1,4 +1,4 @@
-name: ramp-boston
+name: ramp-challenge
 channels:
   - defaults
 dependencies:
