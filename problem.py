@@ -9,7 +9,7 @@ _target_column_name = 'Valeur fonciere'
 # A type (class) which will be used to create wrapper objects for y_pred
 Predictions = rw.prediction_types.make_regression()
 # An object implementing the workflow
-workflow = rw.workflows.Estimator()
+workflow = rw.workflows.Regressor()
 
 
 score_types = [
@@ -26,7 +26,7 @@ def get_cv(X, y):
 def _get_data(path, f_name):
     data = pd.read_csv(os.path.join(path, 'data', f_name), sep=",")
     data = data.dropna(subset=[_target_column_name])
-    X = data.drop([_target_column_name], axis=1)
+    X = data.drop([_target_column_name], axis=1).values
     y_array = data[_target_column_name].str.replace(',', '.').astype(float).values
     return X, y_array
 

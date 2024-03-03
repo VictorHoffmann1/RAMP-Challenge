@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression
 import pandas as pd
 
 
-class Classifier(BaseEstimator):
+class Regressor(BaseEstimator):
     def __init__(self):
 
         self.transformer = Pipeline(
@@ -21,9 +21,9 @@ class Classifier(BaseEstimator):
     def fit(self, X, y):
         # Get numerical data
         # it's your job to figure out what to do with categorical features
-        X_numerical = pd.DataFrame(X).select_dtypes(include=['number'])
+        X_numerical = X[:,[3,5,7,8]]
         self.pipe.fit(X_numerical, y)
 
     def predict(self, X):
-        X_numerical =  pd.DataFrame(X).select_dtypes(include=['number'])
+        X_numerical = X[:,[3,5,7,8]]
         return self.pipe.predict(X_numerical)
